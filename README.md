@@ -11,6 +11,6 @@ TUPLES: are also similar to List but declared with parenthesis() instead of squa
 
 DICTIONARIES: work with Key-Value pairs. import defaultdict from collections package, it easier to work with. defaultdict creates a new default value if a key doesn't exist yet, instead returning an error. You must specify   the type of object you want returned.
 
-LIST COMPREHENSIONS:
+LIST COMPREHENSIONS: enclosed in square brackets. Enables you to filter or apply functions to every item in the list
 
 #DAY 5
