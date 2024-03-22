@@ -1,4 +1,4 @@
-# Python-Week-1 Notes
+# WEEK-1
 # DAY 1 - 3
 
 Indentation is very important in python compared to java that I'm more familiar of. Statements that go together must have the same indentation. Wrong indentation causes errors.
@@ -41,4 +41,49 @@ If Else: Python uses "elif" for "else if"
 While loops: Code can run forever if not provided a break statement to exit from the loop and move to the next line of code. Continue statement is useful for skipping over lines that come after the continue statement. Continue can be used inside if statement to stop some code in the loop from running. Continue and break can also be used for rearanging code and making it neat.
 For Loop: You can declare a variable that will hold the value of each element as you go through the list. 
 Pass: Used as a stub
+
+# WEEK-2
+# DAY 1
+
+FUNCTIONS
+Consists of name and parameters(created with "def" keyword). after "def comes an identifier name followed by a pair of parentheses whic may enclose variable names. A function is a reusable piece of a program, allowing you to run the specific block of code using the specified name by "calling the function".
+
+NAMED PARAMETERS: (OR Keyword arguments) Used to assign a default value to the operation parameter.
+Parameters and Arguments mean the same thing, information that is passed into a function. 
+Function must be called with correct number of args, not more, not less.
+
+*args: Use a * before parameter name if you do not know how many args to pass on to a function, but this only works for positional arguments, not keyword arguments.
+
+**kwargs: Is a method used to handle keyword arguments. Keyword args get stored as a dictionary instead of tuple because they have keys and values can be passed in any order. 
+
+VARIABLES & SCOPE
+
+Locals(): Variables that are only accessible locally within a function. Trying to access a variable outside its scope results in an error.
+
+Globals(): Defined outside the function, in the main code block. Allows for access of many items including Python pre-built variables
+
+Python checks the local scope first for a variable, before moving to check the global scope. We can also redefine a variable that is local and global so it we can print both the local and global data.
+
+We can also declare a function within another function, the inner function can only be called within the function it is declared in. Calling it outside will result in an error
+A function is represented as an object.
+Think of Functions as some variables that are associated with some data
+
+Create Python Text Processing Functions to clean text.(Important in businesses, for processing text)
+
+Lambda Functions: Used to represent a function without giving it a variable name(lambda x: x + 3)(5), the return key is implied. Handy for passing a function as an argument to another Python function.
+An underscore is used as a variable name to indicate that the variable is not used.
+
+# DAY 2
+ANATOMY OF A CLASS
+Static Attributes: Defining a static variable outside of a constructor means each instance will share the same values. Static variables don't change with each instance and are commonly used to hold constants or important business logic. They can still be changed, so to prevent this programmers add an underscore before the variable name(indicating the variable should not be modified directly, a getter method should be used instead).
+A getter method retreives the value of th variable, without passing in the self attribute because the variable is static.
+
+# DAY 3
+
+
+# DAY 4
+
+
+# DAY 5
+
 
