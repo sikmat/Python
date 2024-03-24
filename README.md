@@ -44,18 +44,6 @@ While loops: Code can run forever if not provided a break statement to exit from
 For Loop: You can declare a variable that will hold the value of each element as you go through the list. 
 Pass: Used as a stub
 
-
-# Python-Week-2
-
-# DAY 1
-FUNCTIONS
-=======
-Consists of name and parameters(created with "def" keyword). after "def comes an identifier name followed by a pair of parentheses whic may enclose variable names. A function is a reusable piece of a program, allowing you to run the specific block of code using the specified name by "calling the function".
-NAMED PARAMETERS: (OR Keyword arguments) Used to assign a default value to the operation parameter.
-Parameters and Arguments mean the same thing, information that is passed into a function. 
-Function must be called with correct number of args, not more, not less.
-*args: Use a * before parameter name if you do not know how many args to pass on to a function, but this only works for positional arguments, not keyword arguments.
-
 # WEEK-2
 # DAY 1
 
@@ -78,16 +66,6 @@ Python checks the local scope first for a variable, before moving to check the g
 We can also declare a function within another function, the inner function can only be called within the function it is declared in. Calling it outside will result in an error
 A function is represented as an object.
 Think of Functions as some variables that are associated with some data
-Create Python Text Processing Functions to clean text.(Important in businesses, for processing text)
-
-Globals(): Defined outside the function, in the main code block. Allows for access of many items including Python pre-built variables
-
-Python checks the local scope first for a variable, before moving to check the global scope. We can also redefine a variable that is local and global so it we can print both the local and global data.
-
-We can also declare a function within another function, the inner function can only be called within the function it is declared in. Calling it outside will result in an error
-A function is represented as an object.
-Think of Functions as some variables that are associated with some data
-
 Create Python Text Processing Functions to clean text.(Important in businesses, for processing text)
 
 Lambda Functions: Used to represent a function without giving it a variable name(lambda x: x + 3)(5), the return key is implied. Handy for passing a function as an argument to another Python function.
@@ -150,6 +128,3 @@ Can write to CSV file using writer class
 
 JSON: formatted string looks like Python dictionary, but it's a string. to turn it into a dictionary, we need to import the JSON module at the top of our notebook, import json, and then use a method called json.loads and pass in the string. Notice that this is called loads plural and not load singular
 Dumping JSON: For this, use the json.dumps method. Here is pythonDict, you are going to use json.dumps pythonDict. Notice that this is dumps plura
-
-Static Attributes: Defining a static variable outside a constructor means each instance will share the same values. Static variables don't change with each instance and are commonly used to hold constants or important business logic. They can still be changed, so to prevent this programmers add an underscore before the variable name(indicating the variable should not be modified directly, a getter method should be used instead).
-A getter method retrieves the value of th variable, without passing in the self attribute because the variable is static.
