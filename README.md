@@ -50,13 +50,13 @@ Pass: Used as a stub
 
 # DAY 1
 FUNCTIONS
-
+=======
 Consists of name and parameters(created with "def" keyword). after "def comes an identifier name followed by a pair of parentheses whic may enclose variable names. A function is a reusable piece of a program, allowing you to run the specific block of code using the specified name by "calling the function".
 NAMED PARAMETERS: (OR Keyword arguments) Used to assign a default value to the operation parameter.
 Parameters and Arguments mean the same thing, information that is passed into a function. 
 Function must be called with correct number of args, not more, not less.
 *args: Use a * before parameter name if you do not know how many args to pass on to a function, but this only works for positional arguments, not keyword arguments.
-=======
+
 # WEEK-2
 # DAY 1
 
