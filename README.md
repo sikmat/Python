@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # Python Week 1 Notes
+=======
+# WEEK-1
 # DAY 1 - 3
 
 Indentation is very important in python compared to java that I'm more familiar of. Statements that go together must have the same indentation. Wrong indentation causes errors.
@@ -7,7 +10,7 @@ PyCharm and VScode automate indentation, making it easier and offer more support
 Portable
 Python code is portable due to it being interpreted rather than compiled, which would require the code to be first converted to binary code(0s and 1s) using a complier. When you run the program the linker would first have to  copy the code from disk to memory. 
 Python does not need the code to be compiled to binary, it converts to the code into bytecode and translated it into the native language of the computer. 
-Supports procedure-oriented programming - program is built around procedures or functios (reusable pieces of programs).
+Supports procedure-oriented programming - program is built around procedures or functions (reusable pieces of programs).
 Supports OOP - programs built around objects which combine data and functionality. 
 Strings are immutable in Python?
 String formatting in Python is cleaner.
@@ -42,6 +45,7 @@ While loops: Code can run forever if not provided a break statement to exit from
 For Loop: You can declare a variable that will hold the value of each element as you go through the list. 
 Pass: Used as a stub
 
+<<<<<<< HEAD
 # Python-Week-2
 
 # DAY 1
@@ -52,17 +56,44 @@ NAMED PARAMETERS: (OR Keyword arguments) Used to assign a default value to the o
 Parameters and Arguments mean the same thing, information that is passed into a function. 
 Function must be called with correct number of args, not more, not less.
 *args: Use a * before parameter name if you do not know how many args to pass on to a function, but this only works for positional arguments, not keyword arguments.
+=======
+# WEEK-2
+# DAY 1
+
+FUNCTIONS
+Consists of name and parameters(created with "def" keyword). after "def comes an identifier name followed by a pair of parentheses whic may enclose variable names. A function is a reusable piece of a program, allowing you to run the specific block of code using the specified name by "calling the function".
+
+NAMED PARAMETERS: (OR Keyword arguments) Used to assign a default value to the operation parameter.
+Parameters and Arguments mean the same thing, information that is passed into a function. 
+Function must be called with correct number of args, not more, not less.
+
+*args: Use a * before parameter name if you do not know how many args to pass on to a function, but this only works for positional arguments, not keyword arguments.
+
+>>>>>>> origin/main
 **kwargs: Is a method used to handle keyword arguments. Keyword args get stored as a dictionary instead of tuple because they have keys and values can be passed in any order. 
 
 VARIABLES & SCOPE
 
 Locals(): Variables that are only accessible locally within a function. Trying to access a variable outside its scope results in an error.
+
 Globals(): Defined outside the function, in the main code block. Allows for access of many items including Python pre-built variables
 Python checks the local scope first for a variable, before moving to check the global scope. We can also redefine a variable that is local and global so it we can print both the local and global data.
 We can also declare a function within another function, the inner function can only be called within the function it is declared in. Calling it outside will result in an error
 A function is represented as an object.
 Think of Functions as some variables that are associated with some data
 Create Python Text Processing Functions to clean text.(Important in businesses, for processing text)
+=======
+
+Globals(): Defined outside the function, in the main code block. Allows for access of many items including Python pre-built variables
+
+Python checks the local scope first for a variable, before moving to check the global scope. We can also redefine a variable that is local and global so it we can print both the local and global data.
+
+We can also declare a function within another function, the inner function can only be called within the function it is declared in. Calling it outside will result in an error
+A function is represented as an object.
+Think of Functions as some variables that are associated with some data
+
+Create Python Text Processing Functions to clean text.(Important in businesses, for processing text)
+
 Lambda Functions: Used to represent a function without giving it a variable name(lambda x: x + 3)(5), the return key is implied. Handy for passing a function as an argument to another Python function.
 An underscore is used as a variable name to indicate that the variable is not used.
 
@@ -89,7 +120,8 @@ Exceptions: in Python are determined during runtime and can be retried, whereas 
 Traceback: is a Stack trace, provides a trail through the stack to assist in debugging. Important to know how to interpret the stack trace.
 Try/Except: Statement is used to catch an exception and obtain an instance of the raised exception. We can choose to print something out(a message) as a way of handling the error.
 Finally: If you take the Try / Except block and add a "finally" to it, this will always execute and gets printed out. "Finally" statements will always execute no matter what happens inside the try block. The error is thrown but still printed out. Often used to time how long a function takes to execute. We can import the time class to time our function.
-Type error: Happens when we try to add data types that do not match(ex. string + int). Most specific exceptions should be at the top and general ones to follow, so they can be handled by order of importance. Custom decorators can also be used to do the same
+Type error: Happens when we try to add data types that do not match(ex. string + int). 
+Most specific exceptions should be at the top and general ones to follow, so they can be handled by order of importance. Custom decorators can also be used to do the same
 Custom Exceptions can be created with customized functions
 
 # DAY 4
@@ -117,3 +149,6 @@ Can write to CSV file using writer class
 
 JSON: formatted string looks like Python dictionary, but it's a string. to turn it into a dictionary, we need to import the JSON module at the top of our notebook, import json, and then use a method called json.loads and pass in the string. Notice that this is called loads plural and not load singular
 Dumping JSON: For this, use the json.dumps method. Here is pythonDict, you are going to use json.dumps pythonDict. Notice that this is dumps plura
+=======
+Static Attributes: Defining a static variable outside a constructor means each instance will share the same values. Static variables don't change with each instance and are commonly used to hold constants or important business logic. They can still be changed, so to prevent this programmers add an underscore before the variable name(indicating the variable should not be modified directly, a getter method should be used instead).
+A getter method retrieves the value of th variable, without passing in the self attribute because the variable is static.
