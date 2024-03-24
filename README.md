@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # Python Week 1 Notes
-=======
+
 # WEEK-1
 # DAY 1 - 3
 
@@ -45,7 +44,7 @@ While loops: Code can run forever if not provided a break statement to exit from
 For Loop: You can declare a variable that will hold the value of each element as you go through the list. 
 Pass: Used as a stub
 
-<<<<<<< HEAD
+
 # Python-Week-2
 
 # DAY 1
@@ -68,8 +67,6 @@ Parameters and Arguments mean the same thing, information that is passed into a 
 Function must be called with correct number of args, not more, not less.
 
 *args: Use a * before parameter name if you do not know how many args to pass on to a function, but this only works for positional arguments, not keyword arguments.
-
->>>>>>> origin/main
 **kwargs: Is a method used to handle keyword arguments. Keyword args get stored as a dictionary instead of tuple because they have keys and values can be passed in any order. 
 
 VARIABLES & SCOPE
@@ -82,7 +79,6 @@ We can also declare a function within another function, the inner function can o
 A function is represented as an object.
 Think of Functions as some variables that are associated with some data
 Create Python Text Processing Functions to clean text.(Important in businesses, for processing text)
-=======
 
 Globals(): Defined outside the function, in the main code block. Allows for access of many items including Python pre-built variables
 
@@ -109,11 +105,14 @@ Decorator: is special annotation or description of a function definition used to
 
 INHERITANCE
 
-Class Inheritance: A parent(original) class passes on its attributes and methods to a child class. The child extends the parent. This inheritance occurs automatically when the child gets created. If the child defines an attribute or method that is the same as the parent, the child's version will overwrite the parent's version.
-Extending Built-in classes: Can create a new list by instantiating it as a "list". Although it appears as a function, a list is a class. To avoid infinite recursion/endless loop, we do not use "self.append". We call the original append function in the parent class by using super function (super.append) to access the underlying instance of the parent class. To avoid overwriting the constructor of the parent class, we use super in the function when adding a new attribute to child class.
+Class Inheritance: A parent(original) class passes on its attributes and methods to a child class. The child extends the parent. 
+This inheritance occurs automatically when the child gets created. If the child defines an attribute or method that is the same as the parent, the child's version will overwrite the parent's version.
+Extending Built-in classes: Can create a new list by instantiating it as a "list". Although it appears as a function, a list is a class. 
+To avoid infinite recursion/endless loop, we do not use "self.append". We call the original append function in the parent class by using super function (super.append) to access the underlying instance of the parent class. To avoid overwriting the constructor of the parent class, we use super in the function when adding a new attribute to child class.
 
 # DAY 3
 ERROR HANDLING
+
 HANDLING ERRORS/EXCEPTIONS
 
 Exceptions: in Python are determined during runtime and can be retried, whereas errors cannot be retried. But there are exceptions to this rule. Errors abd Exceptions are actually the same thing. All Python errors and exceptions stem from a class called the base exception. It provides useful properties to exceptions, such as halting code and proving information about why and how it was executed.
@@ -126,6 +125,7 @@ Custom Exceptions can be created with customized functions
 
 # DAY 4
 THREADS AND PROCESSES
+
 Variables Are stored in short-term memory of computer(Processor)
 First program saves files to disk, second program running in its own process picks it up and can access the file storage as well. BUt cannot access it if written to memory as the processes are seperated by the OS, allocating memory for each process.
 OS allows us to move the two pieces of code into the same process, and they get to share memory. They run parallel and the same time on separate threads, instead of the same process.
@@ -136,6 +136,7 @@ Multi-threading decrease the run-time, making it faster when the program has per
 
 # DAY 5
 WORKING WITH FILES
+
 Use open() to open the to work with first
 Use .readline() to read a line from the text file
 Use .readlines() to read all lines
@@ -149,6 +150,6 @@ Can write to CSV file using writer class
 
 JSON: formatted string looks like Python dictionary, but it's a string. to turn it into a dictionary, we need to import the JSON module at the top of our notebook, import json, and then use a method called json.loads and pass in the string. Notice that this is called loads plural and not load singular
 Dumping JSON: For this, use the json.dumps method. Here is pythonDict, you are going to use json.dumps pythonDict. Notice that this is dumps plura
-=======
+
 Static Attributes: Defining a static variable outside a constructor means each instance will share the same values. Static variables don't change with each instance and are commonly used to hold constants or important business logic. They can still be changed, so to prevent this programmers add an underscore before the variable name(indicating the variable should not be modified directly, a getter method should be used instead).
 A getter method retrieves the value of th variable, without passing in the self attribute because the variable is static.
