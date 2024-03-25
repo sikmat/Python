@@ -149,8 +149,9 @@ Ex. "As a digest recipient, I want to receive an email every morning with curren
 
 <img alt="img_2.png" height="300" src="img_2.png" width="400"/>
 
-**Project Requirements**: It is important tp write down traditional requirements to formally capture the capabilities and limitations of an application.
-Functional requirements describe what the application should or should not do, written in sentences starting with the "the application must" or "the application shall."
+**Project Requirements**
+It is important tp write down traditional requirements to formally capture the capabilities and limitations of an application.
+**Functional requirements** describe what the application should or should not do, written in sentences starting with the "the application must" or "the application shall."
 For example, the daily digest application must generate a random inspirational quote and retrieve current weather forecasts, Twitter trends, and a random Wikipedia article. 
 It should format this content into an email and send it to a specified recipient list. These requirements act as a checklist to ensure the application meets all necessary functionalities.
 
