@@ -39,7 +39,7 @@ DICTIONARIES & COMPREHENSIONS
 Can create new dictionary from an iterable structure using comprehensions.
 
 # DAY 5
-If Else: Python uses "elif" for "else if"
+If Else: Python uses "elif" for "else if". If statements can be concluded without an else statement, the next code can execute when the If code is not executed
 While loops: Code can run forever if not provided a break statement to exit from the loop and move to the next line of code. Continue statement is useful for skipping over lines that come after the continue statement. Continue can be used inside if statement to stop some code in the loop from running. Continue and break can also be used for rearanging code and making it neat.
 For Loop: You can declare a variable that will hold the value of each element as you go through the list. 
 Pass: Used as a stub
@@ -128,3 +128,55 @@ Can write to CSV file using writer class
 
 JSON: formatted string looks like Python dictionary, but it's a string. to turn it into a dictionary, we need to import the JSON module at the top of our notebook, import json, and then use a method called json.loads and pass in the string. Notice that this is called loads plural and not load singular
 Dumping JSON: For this, use the json.dumps method. Here is pythonDict, you are going to use json.dumps pythonDict. Notice that this is dumps plura
+
+# WEEK 3
+# DAY 1
+PROJECT PLANNING
+
+Find and nurture project ideas(Inspiration)
+Come up with 3 project ideas
+**User stories**: depict small scenarios from user's perspective. They emphasize their goal and motivation. 
+User stories are brief, simple and informal. Format: "As a [user/role], I want [goa] so that [reason/benefit]" 
+Ex. "As a digest recipient, I want to receive an email every morning with current and useful information so that I know what is going on in the world and learn something new each day."
+
+<img alt="img.png" height="120" src="img.png" width="400"/>
+
+**Use cases**: Include a title, actor(user/system), and a scenario that describes how a goal is achieved. Scenario can be a paragraph or list of steps in simple language.
+
+<img alt="img_1.png" height="120" src="img_1.png" width="400"/>
+
+**User Story VS Use Case**
+
+<img alt="img_2.png" height="300" src="img_2.png" width="400"/>
+
+**Project Requirements**: It is important tp write down traditional requirements to formally capture the capabilities and limitations of an application.
+Functional requirements describe what the application should or should not do, written in sentences starting with the "the application must" or "the application shall."
+For example, the daily digest application must generate a random inspirational quote and retrieve current weather forecasts, Twitter trends, and a random Wikipedia article. 
+It should format this content into an email and send it to a specified recipient list. These requirements act as a checklist to ensure the application meets all necessary functionalities.
+
+<img alt="img_3.png" height="250" src="img_3.png" width="400"/>
+
+These requirements are kept at a high level, without specific details. Additional functional requirements related to the admin include configuring content sources, adding and removing recipients,
+scheduling the email digest, and setting email account credentials.
+
+**Non-functional requirements**: describe how the application should accomplish its tasks. They focus on qualities like maintainability, reliability, and usability. 
+For example, the application should have a configurable GUI for the admin to interact with, be extensible for adding more content types, and be resilient to content errors.
+
+**Architecture**: Organize and structure the code application. Identifying nouns helps determine potential objects.
+For instance, in the functional requirements, words like quote, forecast, location, trends, article, content, email, and recipients stand out as potential objects.
+
+<img alt="img_4.png" height="420" src="img_4.png" width="400"/>
+
+Grouping related nouns together, such as content and email, provides a starting point for potential classes. 
+Content, email, and GUI emerge as candidates for classes. Next, the behaviors and responsibilities are determined by extracting simplified verb phrases from the requirements, like generating quotes, retrieving forecasts, formatting content, and sending emails. 
+These behaviors are assigned to the corresponding classes based on their relevance.
+
+The content class is responsible for generating and retrieving content, the email class handles formatting content and sending emails, and the GUI class manages configuration-related behaviors. 
+This process helps draft method names and provides an initial structure for the program.
+
+<img alt="img_5.png" height="220" src="img_5.png" width="300"/>
+
+While a comprehensive plan is necessary for team projects, for solo developers and smaller projects, focusing on a rough plan with three classes is sufficient to begin coding. 
+The plan may evolve as implementation progresses, and changes are expected.
+
+**Stub code**: Useful for providing structure for implementation, allowing separate development of parts of an application.
