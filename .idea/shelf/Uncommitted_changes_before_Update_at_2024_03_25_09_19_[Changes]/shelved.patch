@@ -1,0 +1,60 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Python-Week-1 Notes\r\n# DAY 1 - 3\r\n\r\nIndentation is very important in python compared to java that I'm more familiar of. Statements that go together must have the same indentation. Wrong indentation causes errors.\r\nPyCharm and VScode automate indentation, making it easier and offer more support for python \r\n\r\nPortable\r\nPython code is portable due to it being interpreted rather than compiled, which would require the code to be first converted to binary code(0s and 1s) using a complier. When you run the program the linker would first have to  copy the code from disk to memory. \r\nPython does not need the code to be compiled to binary, it converts to the code into bytecode and translated it into the native language of the computer. \r\nSupports procedure-oriented programming - program is built around procedures or functios (reusable pieces of programs).\r\nSupports OOP - programs built around objects which combine data and functionality. \r\nStrings are immutable in Python?\r\nString formating in Python is cleaner.\r\nConcatenation is not neat and is error prone.\r\nString conversion is done automatically by the format method, Ie. Create variable and assign it a value which you then call with its index. Assign those variables as arguments the format method. Can also use named parameters using f-strings, all you do is place letter f before the string Ex: (f'{name} was {age} years old')\r\nDoes literal constants mean I cannot write numbers purely as a String? *Interesting*\r\nBoolean NOT negates True to False and False to True.\r\nBoolean AND (x and y) returns False if x is False, else it returns y. \r\nBoolean OR, if x is True returns True, else returns evaluation of \r\nFloor division //\r\n\r\n# DAY 4\r\nSETS: are usefull for removing duplicates from a list because they can only contain unique values and their order is randomized. Their elements cannot be accessed with index or slicing syntax. \r\nExplored sets union and how duplicates can be removed using examples from https://realpython.com/python-sets/\r\n\r\nTUPLES: are also similar to List but declared with parenthesis() instead of square brackets[], but can also be without parenthesis. They cannot be modified, elements can be accessed via index. Take up less memory, usefull    for storing large amounts of data compared to lists. Also useful for returning multiple values from a a function.\r\n\r\nDICTIONARIES: work with Key-Value pairs. import defaultdict from collections package, it easier to work with. defaultdict creates a new default value if a key doesn't exist yet, instead returning an error. You must specify   the type of object you want returned.\r\n\r\nLIST COMPREHENSIONS: enclosed in square brackets. Enables you to filter or apply functions to every item in the list. They are useful for cleaning string and handling large datasets\r\n\r\nLIST COMPREHENSIONS with FUNCTIONS\r\nSPLIT Function: Allows you to split a string based on a given character or string, using a period as a delimiter or spaces if there is no delimiter available. The string is then separated from the period. \r\nTo remove periods and apply lowercase we can create a function which uses \"replace\" and \"lower\" functions to remove periods and convert string to lowercase\r\n\r\nDICTIONARIES & COMPREHENSIONS\r\nCan create new dictionary from an iterable structure using comprehensions.\r\n\r\n# DAY 5\r\nIf Else: Python uses \"elif\" for \"else if\"\r\nWhile loops: Code can run forever if not provided a break statement to exit from the loop and move to the next line of code. Continue statement is useful for skipping over lines that come after the continue statement. Continue can be used inside if statement to stop some code in the loop from running. Continue and break can also be used for rearanging code and making it neat.\r\nFor Loop: You can declare a variable that will hold the value of each element as you go through the list. \r\nPass: Used as a stub\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision d6e14faa817a06985e7644dec71df2fc8e7742f5)
++++ b/README.md	(date 1710753536520)
+@@ -37,7 +37,7 @@
+ Can create new dictionary from an iterable structure using comprehensions.
+ 
+ # DAY 5
+-If Else: Python uses "elif" for "else if"
++If Else: Python uses "elif" for "else if". If statements can be concluded without an else statement, the next code can execute when the If code is not executed
+ While loops: Code can run forever if not provided a break statement to exit from the loop and move to the next line of code. Continue statement is useful for skipping over lines that come after the continue statement. Continue can be used inside if statement to stop some code in the loop from running. Continue and break can also be used for rearanging code and making it neat.
+ For Loop: You can declare a variable that will hold the value of each element as you go through the list. 
+ Pass: Used as a stub
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"3dff105e-4423-410d-9ca0-a29a17c0374b\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2diP9aXlVNvuFx5TN1X8uPSGien\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"last_opened_file_path\": \"C:/Users/Sikelela.Mathole/Documents/Python-Week-1\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"3dff105e-4423-410d-9ca0-a29a17c0374b\" name=\"Changes\" comment=\"\" />\r\n      <created>1710487774436</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1710487774436</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d6e14faa817a06985e7644dec71df2fc8e7742f5)
++++ b/.idea/workspace.xml	(date 1711346810641)
+@@ -1,7 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="3dff105e-4423-410d-9ca0-a29a17c0374b" name="Changes" comment="" />
++    <list default="true" id="3dff105e-4423-410d-9ca0-a29a17c0374b" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -18,13 +20,13 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
+-    "last_opened_file_path": "C:/Users/Sikelela.Mathole/Documents/Python-Week-1"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sikelela.Mathole/Documents/Python-Week-1&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
