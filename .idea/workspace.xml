@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dff105e-4423-410d-9ca0-a29a17c0374b" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_03_25_09_19_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_03_25_09_19__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Python-Week-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python-Week-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_03_27_16_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024_03_27_16_01__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week-2.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Week-2.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week-3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Week-3.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +94,7 @@
       <workItem from="1711800748974" duration="13918000" />
       <workItem from="1711891371561" duration="22645000" />
       <workItem from="1711985012835" duration="3742000" />
+      <workItem from="1712040492928" duration="8668000" />
     </task>
     <task id="LOCAL-00001" summary="25/03/24">
       <option name="closed" value="true" />
