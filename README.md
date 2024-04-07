@@ -181,3 +181,92 @@ While a comprehensive plan is necessary for team projects, for solo developers a
 The plan may evolve as implementation progresses, and changes are expected.
 
 **Stub code**: Useful for providing structure for implementation, allowing separate development of parts of an application.
+
+# DAY 2
+CONTENT RETRIEVAL
+
+get_random_quote function to generate random quotes from csv file
+The CSV format is chosen for simplicity, with each line containing the author and quote separated by a vertical pipe symbol.
+The CSV file is opened, and a list of dictionaries is created using list comprehension, where each dictionary represents an author and their quote. The CSV reader is instructed to use the vertical pipe symbol as the delimiter. In the except block, a default quote is defined in case the file fails to load.
+
+Openweather API 
+When accessing the forecast API, the default format for the returned data is JSON. An example of this JSON response can be found in the documentation. However, since the JSON contains more weather information than necessary for the email, only use a select few fields that are relevant. Now, let's examine the Python code that calls and utilizes the forecast API.
+The get_weather_forecast function retrieves weather forecasts based on coordinates. If no coordinates are provided, it uses a default location
+request module to retrieve the JSON response from the API, which is then parsed into a Python dictionary using the JSON module's load function.
+
+Trending Social Media Content (Twitter) - THIS DID NOT WORK
+It is important to use actively maintained libraries when working with APIs since they can change over time. Unfortunately, this library did not have the required functionality, so continue your search.
+It is important to highlight that using Google or similar resources to learn how to accomplish something is not considered cheating. It is a misconception some beginner programmers have, but even experienced programmers rely on search engines. In fact, a recent survey showed that nearly 90% of developers turn to Google when they face challenges. The programming field has become so vast that it is impossible for one person to know everything. We should embrace knowledge sharing and collectively enhance our skills.
+Tweepy is a popular, regularly updated, Python library and possesses the required capabilities for my project. Its documentation revealed an API method called "trends_place," which retrieves current trends based on a location's unique identifier called WOEID (Where On Earth Identifier).
+
+Importing Articles
+fetch a random Wikipedia article. The availability of a Wikipedia API was checked to fulfill this requirement. A search on Google for Wikipedia API documentation led to finding the desired information. Conveniently, Wikipedia offers a REST API that allows access to their content.
+o proceed, the get button is clicked, followed by the try it out button. From the dropdown menu, the desired return format can be selected. There are options available to obtain a random page title, the full page HTML, or a summary of key points. Since including an entire Wikipedia article in the digest email is unnecessary, selecting the summary option is ideal. After making the selection, the execute button is clicked.
+The updated get Wikipedia article function utilizes the request module's URL open function at line 65 to access the URL for a random page summary. Subsequently, the response is passed to the JSON module's load function for parsing. Only specific information from the response is necessary, namely the page title, summary extract, and URL. These details are extracted and packaged into a dictionary, which is then returned
+
+# DAY 3
+WRITING AND FORMATTING EMAIL MESSAGES
+
+Python's MIMEMultipart class allows us to include both formats in a single email message, which will be covered in the next section. It's worth noting that HTML is the more commonly used format for emails these days.
+Sometimes, it's better to have both Plaintext and HTML versions in the Daily Digest email. So, to achieve that, the format message method generates both types of content
+In the init constructor method, an instance variable is initialized as a dictionary to store the four types of content, each with a Boolean flag indicating if it should be included. The latest content is retrieved using functions from the DD content module.
+Moving on to generating HTML content, a similar process is followed. HTML strings are concatenated to the HTML variable (line 51), using HTML tags and angle brackets to define the display format like a webpage.
+
+Sending an email
+To send it as an email. Luckily, Python has a convenient library called 'email' in its standard package, which helps manage email messages. This package has various modules, but for this project, focus on the 'email.message' module to handle the email message itself.
+The core of this module revolves around a class known as "Email Message." It is the main tool used to put together different components of the daily digest email, like the subject line, recipient list, and, of course, the message content. Moving up a level to the email package, as the documentation explains, this package can assist in handling email messages, but it isn't meant for actually sending them.
+In other Python modules like SMTP-Lib, you can find the same functionality. This module lets you create a client session to send emails through an SMTP server. Basically, you need an SMTP email server to connect to. Now, setting up and running your own email server locally is quite a hassle, so I wouldn't recommend it. 
+
+The good news is that many online email services offer an SMTP server that you can use with external email clients and various applications. Around May 2022, Google changed its security policy, and you can no longer sign in programmatically with just a username and password. It is considered less secure. Consequently, Gmail does not work for this solution anymore. Instead, you should use an Outlook email address.
+According to Microsoft's support page, there's this handy documentation that gives you the server name, port, and encryption method for connecting to the Outlook SMTP server.
+SMTP-Lib, which helps us connect to the outlook server, and the email message class from the email.message module. Moving on, the send email function begins by creating a new email message object. Finally, the send email method establishes a secure connection to the SMTP server using TLS encryption. After logging in with the sender's credentials, we call the send message method to send the email message object.
+By including both plain text and HTML versions, the daily digest email becomes compatible with a wider range of email clients and settings.
+
+Task Scheduling
+That leaves us with one final task: implementing the ability to send the daily digest at a specific time every day.
+
+To tackle this, include a method called schedule time in the GUI. The idea is for the administrator to use the GUI to set the desired sending time for the email. This time is then passed to the email object, which takes responsibility for sending the email at the scheduled time. 
+In order to schedule the daily email sending in the application, opt for a handy library called "schedule" that you can come across on the Python package index. This was chosen because it offers a really easy-to-use interface for scheduling tasks to repeat at specific intervals or times of day, which sounded ideal for what we wanted. However, as you delved into the documentation, you will discover a limitation with this schedule library that you will have to find a solution for.
+By default, the scheduler lacks the capability to operate in the background. This means that if a task is scheduled to send an email in the future, the program will remain idle until that task is completed. Consequently, the main thread would become unresponsive, preventing the administrator from interacting with the program
+A workaround for running the scheduler as a separate thread can be found in the documentation. There is an example of defining a class called "schedule thread" that inherits Python's thread class to handle the scheduling activity separately from the main thread
+
+# DAY 4
+GUI Design Planning
+
+Normally, leave GUI development until the end of a project. This way, you can ensure that the necessary foundation of the application is built first before creating a visually impressive GUI that would not be of much use without the underlying functionality.
+graphical user interface (GUI) using Python's Tkinter module
+Either sketch ideas on a piece of paper or play around with shapes on PowerPoint slides. There are probably better UX design tools out there, but these methods do the trick.
+Envision each task as a separate box and arranged the elements within them. Later on, reorganized these boxes as subsections to create the overall GUI layout. This approach made the process more manageable and prevented me from getting stuck with a blank sheet of paper.
+At this point, ponder how the program would recognize configuration changes. You might think about creating a user interface (GUI) that would automatically update the program's variables whenever a change was made in the fields. However, that approach could lead to some chaos. For instance, let's say the admin was scrolling through the options to set a new send time and accidentally scrolled past the current time. That would trigger an unwanted email digest to be sent prematurely to all recipients, which is definitely not ideal. To avoid such mishaps, include an "Update Settings" button. This button will allow the admin to deliberately lock in the new configuration settings, ensuring that unintended actions are prevented.
+
+# DAY 5
+DESIGN ITERATION
+
+These tasks provide a good starting point for further developing your daily digest project. Remember to prioritize based on your goals and the impact each feature will have on the user experience. Enjoy the process of enhancing your application and gathering feedback from your recipients to continue making it even better!
+
+1. Save Configuration Settings
+2. Customizable Content for Recipients
+3. Personalized Weather Forecast
+4. Timezone-based Email Sending
+5. Notifying Admin of Unavailable Content Sources
+6. Persistent Application as a Scheduled Service
+7. Secure Storage of Sensitive Information
+8. GUI Improvements
+
+Preserving Configuration Settings
+It is about saving and restoring configuration settings when I exit and restart the application. The good news is that all the settings I needed were already part of the graphical user interface (GUI). I just had to write some code within the GUI module.
+To save the information between program runs, se JSON as the file format
+
+ Project Packaging and Distribution 
+ Adding new features to your Python project can go on forever, as long as you are having fun and still learning. However, there may come a time when you want to share your cool new application with others. 
+ Thankfully, there is a handy tool called PyInstaller that can bundle a Python app and all its dependencies into a single package. You can easily install it by running the command "pip install pyinstaller."
+ Once PyInstaller is installed, navigate to your project directory in the terminal. You can turn your app into an executable using the command "pyinstaller -w -F" followed by the top-level Python script (in this case, "dd_gui.py"). While PyInstaller works its magic, let's talk about what those flags mean. 
+ The "-w" flag tells Windows and Mac OS not to show a console window when the program runs. This way, you will not get an extra console window along with the Tkinter GUI window you want. The "-F" flag tells PyInstaller 
+ to create a bundled executable in a single file, containing everything your program needs to run.
+ After running PyInstaller, a "dist" folder is created in your project directory (if you are using Windows). Inside this folder, find the generated EXE file. Now, you can send this executable to your mom or anyone else 
+ who wants to send their own digest emails. Simply double-clicking on it will launch the program and display the GUI.
+ Keep in mind that PyInstaller offers many more features and capabilities than what we covered here. If you are interested in distributing your Python apps as executables, I recommend checking out the PyInstaller 
+ documentation for further details.
+
+
+
